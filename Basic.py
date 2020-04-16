@@ -22,3 +22,19 @@ for x in numbers:
     for item in range(x):
         display += "X"
     print(display)
+
+# Nested loop to display big L
+numbers = [2, 2, 2, 2, 10]  # to display big L
+for x in numbers:
+    display = ""
+    for item in range(x):
+        display += "X"
+    print(display)
+
+#  Write a program to find the largest number from a list
+numbers = [2, 2, 2, 2, 10]
+large = 0
+for number in numbers:
+    if number > large:
+        large = number
+print(large)
