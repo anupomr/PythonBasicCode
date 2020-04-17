@@ -34,11 +34,19 @@ for x in numbers:
 #  Write a program to find the largest number from a list
 numbers = [2, 2, 2, 2, 10]
 large = 0
-for number in numbers:
+numbers.insert(0, 22)
+numbers.remove(2)
+numbers.sort()
+uniques = []
+for number in numbers:  # To make the list unique
+    if number not in uniques:
+        uniques.append(number)
+
+for number in numbers:  # to find the largest number from a list
     if number > large:
         large = number
 print(large)
-
+print(numbers)
 
 # 2 Dimensional Lists
 matrix = [
@@ -51,3 +59,12 @@ matrix[0][2] = 21
 print(matrix[0][2])
 for row in matrix:
     print(row)
+
+# Tuples structure
+numbers = (11, 2, 3)  # This kind of list can't be change / mutable
+print(numbers[0])
+
+# Unpacking
+coordinates = (1, 2, 3)
+x, y, z = coordinates
+print(y)
